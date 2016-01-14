@@ -8,10 +8,36 @@
 
 
     <!-- End Dianne -->
+    <!-- Begin Marc -->
+    <script src="js/cssclass.js"></script>
+    <script src="js/base.js"></script>
+
+    <script src="js/time.js"></script>
+
+
+
+
+
+    <!-- End Marc -->
 </head>
 <body>
 <div>
-    <img src="images/sakurai.jpg">
+
+    <img id="afbeelding" src="images/sakurai.jpg">
 </div>
+<div id="counter">You have been worshipping for 0 seconds.</div>
 </body>
+<script>
+
+
+    window.onload= new function(){
+        counter = document.getElementById("counter");
+        image = document.getElementById("afbeelding");
+
+        onAnimationTime();
+
+        window.setTimeout(onNextSecond, 1000 );
+        console.log("Window Loaded!");
+    };
+</script>
 </html>

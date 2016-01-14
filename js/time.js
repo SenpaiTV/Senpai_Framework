@@ -3,16 +3,28 @@
  */
 
 
-function Klasse(naam, time){
-    this.time = time;
-    this.naam = naam;
-}
-var POSITIONS = new Array(new Klasse("test", 1000), new Klasse("test", 1000));
+var x;
+var y;
+var css;
 
-function onTime(){
-    var x = Math.floor(Math.random() * POSITIONS);
+
+var counter;
+var image;
+function onAnimationTime(){
+    do{
+        x = Math.floor(Math.random() * POSITIONS.length);
+    }while(x == y);
+    y = x;
+
+    css = POSITIONS[x];
+    image.className = css.naam;
+    window.setTimeout(onAnimationTime, css.tijd);
 }
 
-window.onload(new function(){
-    window.setInterval(onTime, 1000);
-});
+
+var secs = 0;
+function onNextSecond(){
+    secs++;
+    counter.innerHTML = "You have been worshipping for " + secs + " seconds.";
+    window.setTimeout(onNextSecond, 1000);
+}
