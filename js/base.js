@@ -8,14 +8,14 @@ var POSITIONS = new Array(new CSSClass("bigger", 1000), new CSSClass("smaller", 
 
 
 function onLoaded(){
+    console.log("Window Loaded!");
     counter = document.getElementById("counter");
     image = document.getElementById("afbeelding");
 
     onAnimationTime();
-
+    initAudio();
     window.setTimeout(onNextSecond, 1000 );
-    console.log("Window Loaded!");
-    gabifyConsole();000
+    //gabifyConsole();
 
 
 };

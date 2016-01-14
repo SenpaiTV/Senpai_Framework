@@ -4,14 +4,16 @@
 
 
 
-var audio = new Audio(audioSrc);
+var audio;
 function loopAudio(){
+    audio = new Audio(audioSrc);
     audio.loop = true;
     audio.play();
 }
 
 
 function initAudio(){
+    console.log("Audiotype: "+audioType);
     if(audioType == 0){
         return;
     }else if(audioType == 1){
