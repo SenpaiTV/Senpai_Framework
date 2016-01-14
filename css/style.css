@@ -17,8 +17,10 @@ div {
 .smaller {
     height: 50%;
     length: 50%;
+    transition: width 1000s, height 1000s;
 }
 .bigger {
     height: 150%;
     length: 150%;
+    transition: width 1000s, height 1000s;
 }
