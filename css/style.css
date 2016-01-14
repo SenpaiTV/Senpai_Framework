@@ -4,8 +4,8 @@ html,body{
     overflow:hidden;
 }
 div {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 120%;
+    max-height: 120%;
     bottom: 0;
     left: 0;
     margin: auto;
@@ -15,12 +15,16 @@ div {
 }
 
 .smaller {
-    height: 50%;
-    length: 50%;
-    transition: width 1000s, height 1000s;
+    height: 120%;
+    length: 120%;
+    transition: width 1s, height 1s;
+
 }
 .bigger {
-    height: 150%;
-    length: 150%;
-    transition: width 1000s, height 1000s;
+    height: 400%;
+    length: 400%;
+    transition: width 1s, height 1s;
+
+
+
 }
