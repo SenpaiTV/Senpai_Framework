@@ -28,3 +28,5 @@ function onNextSecond(){
     counter.innerHTML = "You have been worshipping for " + secs + " seconds.";
     window.setTimeout(onNextSecond, 1000);
 }
+
+console.log("Loaded Time.JS!");

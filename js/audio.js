@@ -25,3 +25,5 @@ function initAudio(){
         //TODO: Vine implementation.
     }
 }
+
+console.log("Loaded Audio.JS!");

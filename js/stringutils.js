@@ -8,3 +8,4 @@ function startsWith(string, prefix){
 function startsWithFrom (string, prefix, start) {
     return string.splice(prefix.length, 0);
 }
+console.log("Loaded StringUtils.JS!");

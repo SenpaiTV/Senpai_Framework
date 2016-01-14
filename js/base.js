@@ -19,3 +19,5 @@ function onLoaded(){
 
 
 };
+
+console.log("Loaded Base.JS!");
