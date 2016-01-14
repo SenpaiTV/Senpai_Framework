@@ -21,8 +21,25 @@
         var imageSrc = "images/sakurai.jpg";
 
 
+
+        /**
+         * The type of audio file that the audioSrc is.
+         *
+         * 0 = no audio :'(
+         * 1 = An audio file like *.mp3 or *.wav
+         * 2 = The id of a youtube video. The URL "https://www.youtube.com/watch?v=ls0smp7yHAs" becomes the id "ls0smp7yHAs". It is automatically looped.
+         *
+         * Not Yet Implemented:
+         *
+         * 3 = Vimeo.
+         * 4 = Vine.
+         * @type {number}
+         */
+        var audioType = 0;
+
         /**
          * The SRC file for the audio loop.
+         * Can be a normal file like a *.mp3, a *.wav, or a youtube embeded link.
          * @type {string}
          */
         var audioSrc = "http://rill.loempiaisme.nl/mand.mp3";
