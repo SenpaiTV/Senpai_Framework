@@ -4,11 +4,27 @@
 
 
 var x;
+var y;
 var css;
 
-function onTime(){
-    x = Math.floor(Math.random() * POSITIONS.length);
+
+var counter;
+var image;
+function onAnimationTime(){
+    do{
+        x = Math.floor(Math.random() * POSITIONS.length);
+    }while(x == y);
+    y = x;
+
     css = POSITIONS[x];
-    document.getElementById("afbeelding").className = css.naam;
-    window.setTimeout(onTime, css.tijd);
+    image.className = css.naam;
+    window.setTimeout(onAnimationTime, css.tijd);
+}
+
+
+var secs = 0;
+function onNextSecond(){
+    secs++;
+    counter.innerHTML = "You have been worshipping for " + secs + " seconds.";
+    window.setTimeout(onNextSecond, 1000);
 }

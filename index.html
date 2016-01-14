@@ -24,12 +24,18 @@
 <div>
     <img id="afbeelding" src="images/sakurai.jpg" width="1920" height="1080">
 </div>
+<div id="counter">You have been worshipping for 0 seconds.</div>
 </body>
 <script>
 
 
     window.onload= new function(){
-        onTime();
+        counter = document.getElementById("counter");
+        image = document.getElementById("afbeelding");
+
+        onAnimationTime();
+
+        window.setTimeout(onNextSecond, 1000 );
         console.log("Window Loaded!");
     };
 </script>
