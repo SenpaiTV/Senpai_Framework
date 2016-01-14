@@ -9,6 +9,26 @@
 
     <!-- End Dianne -->
     <!-- Begin Marc -->
+
+
+
+    <!-- Config for the site. -->
+    <script>
+        /**
+         * The SRC file for the image.
+         * @type {string}
+         */
+        var imageSrc = "images/sakurai.jpg";
+
+
+        /**
+         * The SRC file for the audio loop.
+         * @type {string}
+         */
+        var audioSrc = "http://rill.loempiaisme.nl/mand.mp3";
+
+
+    </script>
     <script src="js/cssclass.js"></script>
     <script src="js/base.js"></script>
 
@@ -31,17 +51,6 @@
 <script>
 
 
-    window.onload= new function(){
-        counter = document.getElementById("counter");
-        image = document.getElementById("afbeelding");
-
-        onAnimationTime();
-
-        window.setTimeout(onNextSecond, 1000 );
-        console.log("Window Loaded!");
-
-        gabifyConsole();
-
-    };
+    window.onload = onLoaded();
 </script>
 </html>
