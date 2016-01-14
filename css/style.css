@@ -1,8 +1,24 @@
-html {
-    background: url(../images/sakurai.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    transition: width 100s, height 100s;
+html,body{
+    margin:0;
+    height:100%;
+    overflow:hidden;
+}
+div {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.smaller {
+    height: 50%;
+    length: 50%;
+}
+.bigger {
+    height: 150%;
+    length: 150%;
 }
