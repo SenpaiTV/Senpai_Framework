@@ -3,6 +3,6 @@
  */
 
 function CSSClass(naam, time){
-    this.time = time;
+    this.tijd = time;
     this.naam = naam;
 }

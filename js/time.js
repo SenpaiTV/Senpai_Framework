@@ -3,12 +3,12 @@
  */
 
 
-
+var x;
+var css;
 
 function onTime(){
-    var x = Math.floor(Math.random() * POSITIONS);
-    window.setInterval(onTime, 1000);
-    var css = POSITIONS[x];
-    document.getElementById("")
-    css.naam
+    x = Math.floor(Math.random() * POSITIONS.length);
+    css = POSITIONS[x];
+    document.getElementById("afbeelding").className = css.naam;
+    window.setTimeout(onTime, css.tijd);
 }
