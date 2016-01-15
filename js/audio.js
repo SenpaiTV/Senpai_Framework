@@ -19,13 +19,25 @@ function initAudio(){
     }else if(audioType == 1){
         loopAudio();
     }else if(audioType == 2){
-        var url = "http://www.youtube.com/v/"+audioSrc+"?version=3&loop=1&playlist=,";
-        //TODO: Youtube werkend maken.
+        var url = "https://www.youtube.com/embed/"+audioSrc+"?autoplay=1&loop=1&playlist="+audioPlaylist;
+        doYoutube(url)
     }else if(audioType == 3){
         //TODO: Vimeo implementation.
     }else if(audioType == 4){
         //TODO: Vine implementation.
     }
 }
+
+
+
+var youtube;
+function doYoutube(url){
+    youtube = document.createElement("IFRAME");
+    youtube.setAttribute("src", url);
+    youtube.setAttribute("width", 0+"px");
+    youtube.setAttribute("height", 0+"px");
+    document.body.appendChild(youtube);
+}
+
 
 console.log("Loaded Audio.JS!");
