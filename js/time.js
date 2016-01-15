@@ -26,7 +26,7 @@ function onAnimationLoop(){
 
 function onAnimationStart(){
     onAnimationTime();
-    onAnimationLoop();
+    window.setTimeout(onAnimationLoop, 2000);
 }
 
 
