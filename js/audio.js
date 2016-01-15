@@ -15,10 +15,15 @@ function loopAudio(){
 function initAudio(){
     var date = Date();
     console.log("Audiotype: "+audioType);
-    if(date.getMonth() == 3 && date.getDate() == 1 && enableJoke){
-        console.log("April's Fools!");
-        doEmbed("https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=,");
-    }else if(audioType == 0){
+    if(date.getMonth() == 3 && date.getDate() == 1){
+        if(enableJoke){
+            console.log("April's Fools!");
+            doEmbed("https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=,");
+            return;
+        }
+    }
+
+    if(audioType == 0){
         return;
     }else if(audioType == 1){
         loopAudio();
