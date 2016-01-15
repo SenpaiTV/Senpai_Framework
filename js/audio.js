@@ -15,12 +15,16 @@ function loopAudio(){
 function initAudio(){
     var date = Date();
     console.log("Audiotype: "+audioType);
-    if(date.getMonth() == 3 && date.getDate() == 1){
-        if(enableJoke){
-            console.log("April's Fools!");
-            doEmbed("https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=,");
-            return;
+    try{
+        if(date.getUTCMonth() == 3 && date.getDate() == 1){
+            if(enableJoke){
+                console.log("April's Fools!");
+                doEmbed("https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=,");
+                return;
+            }
         }
+    }catch(err){
+
     }
 
     if(audioType == 0){
