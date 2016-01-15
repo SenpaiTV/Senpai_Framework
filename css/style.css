@@ -16,9 +16,11 @@ div {
 }
 
 .smaller {
-    height: 120%;
-    width: 120%;
-    transition: width 5s, height 5s;
+    height: 150%;
+    width: 150%;
+    transition: width 10s, height 10s, margin-left 10s, margin-top 10s;
+    margin-left:-20%;
+
     animation-fill-mode: forwards;
     position:absolute;
 
@@ -27,10 +29,11 @@ div {
 
 }
 .bigger {
-    height: 200%;
-    width: 200%;
-    transition: width 5s, height 5s;
-    margin-left:-40%;
+    height: 400%;
+    width: 400%;
+    transition: width 10s, height 10s,margin-left 10s, margin-top 10s;
+    margin-top:-50%;
+    margin-left:-140%;
     animation-fill-mode: forwards;
     position:absolute;
 

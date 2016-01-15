@@ -2,7 +2,7 @@
  * Created by marcs on 14-1-2016.
  */
 
-var POSITIONS = new Array(new CSSClass("bigger", 1000), new CSSClass("smaller", 1000));
+var POSITIONS = new Array(new CSSClass("bigger", 15000), new CSSClass("smaller", 15000));
 
 
 
