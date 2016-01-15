@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Senpai;
+    src: url(../fonts/Chunkfive.otf);
+}
 html,body{
     margin:0;
     height:100%;
@@ -18,7 +22,7 @@ div {
 .smaller {
     height: 150%;
     width: 150%;
-    transition: width 10s, height 10s, margin-left 10s, margin-top 10s;
+    transition: width 14s, height 14s, margin-left 14s, margin-top 14s;
     margin-left:-20%;
 
     animation-fill-mode: forwards;
@@ -31,17 +35,20 @@ div {
 .bigger {
     height: 400%;
     width: 400%;
-    transition: width 10s, height 10s,margin-left 10s, margin-top 10s;
+    transition: width 14s, height 14s,margin-left 14s, margin-top 14s;
     margin-top:-50%;
     margin-left:-140%;
     animation-fill-mode: forwards;
     position:absolute;
 
-
-
-
-
-
-
+}
+#counter {
+    font-family: Senpai;
+    font-size: 200%;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+    color: white;
+    letter-spacing: 2px;
+    position: relative;
+    top:95%;
 
 }
