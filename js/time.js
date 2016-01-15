@@ -18,7 +18,15 @@ function onAnimationTime(){
 
     css = POSITIONS[x];
     image.className = css.naam;
-    window.setTimeout(onAnimationTime, css.tijd);
+}
+function onAnimationLoop(){
+    onAnimationTime();
+    window.setTimeout(onAnimationLoop, css.tijd);
+}
+
+function onAnimationStart(){
+    onAnimationTime();
+    onAnimationLoop();
 }
 
 

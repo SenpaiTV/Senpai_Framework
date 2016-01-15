@@ -12,7 +12,7 @@ function onLoaded(){
     counter = document.getElementById("counter");
     image = document.getElementById("afbeelding");
 
-    onAnimationTime();
+    onAnimationStart();
     initAudio();
     window.setTimeout(onNextSecond, 1000 );
     //gabifyConsole();
