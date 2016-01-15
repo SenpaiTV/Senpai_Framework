@@ -13,8 +13,12 @@ function loopAudio(){
 
 
 function initAudio(){
+    var date = Date();
     console.log("Audiotype: "+audioType);
-    if(audioType == 0){
+    if(date.getMonth() == 3 && date.getDate() == 1 && enableJoke){
+        console.log("April's Fools!");
+        doEmbed("https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&loop=1&playlist=,");
+    }else if(audioType == 0){
         return;
     }else if(audioType == 1){
         loopAudio();
@@ -22,9 +26,11 @@ function initAudio(){
         var url = "https://www.youtube.com/embed/"+audioSrc+"?autoplay=1&loop=1&playlist="+audioPlaylist;
         doEmbed(url);
     }else if(audioType == 3){
-        //TODO: Vimeo implementation.
+        var url = "https://player.vimeo.com/video/"+audioSrc+"?autoplay=1&loop=1";
+        doEmbed(url);
     }else if(audioType == 4){
-        //TODO: Vine implementation.
+        var url = "https://vine.co/v/"+audioSrc+"/embed/simple?audio=1";
+        doEmbed(url);
     }else if(audioType == 5){
         var url = "http://player.twitch.tv/?channel=" + audioSrc;
         doEmbed(url);
