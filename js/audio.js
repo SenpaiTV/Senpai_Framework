@@ -20,18 +20,21 @@ function initAudio(){
         loopAudio();
     }else if(audioType == 2){
         var url = "https://www.youtube.com/embed/"+audioSrc+"?autoplay=1&loop=1&playlist="+audioPlaylist;
-        doYoutube(url)
+        doEmbed(url);
     }else if(audioType == 3){
         //TODO: Vimeo implementation.
     }else if(audioType == 4){
         //TODO: Vine implementation.
+    }else if(audioType == 5){
+        var url = "http://player.twitch.tv/?channel=" + audioSrc;
+        doEmbed(url);
     }
 }
 
 
 
 var youtube;
-function doYoutube(url){
+function doEmbed(url){
     youtube = document.createElement("IFRAME");
     youtube.setAttribute("src", url);
     youtube.setAttribute("width", 0+"px");
