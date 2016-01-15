@@ -9,21 +9,35 @@ div {
     bottom: 0;
     left: 0;
     margin: auto;
-    position: fixed;
     right: 0;
     top: 0;
+    position: absolute;
+    overflow: hidden;
 }
 
 .smaller {
     height: 120%;
-    length: 120%;
-    transition: width 1s, height 1s;
+    width: 120%;
+    transition: width 5s, height 5s;
+    animation-fill-mode: forwards;
+    position:absolute;
+
+
+
 
 }
 .bigger {
-    height: 400%;
-    length: 400%;
-    transition: width 1s, height 1s;
+    height: 200%;
+    width: 200%;
+    transition: width 5s, height 5s;
+    margin-left:-40%;
+    animation-fill-mode: forwards;
+    position:absolute;
+
+
+
+
+
 
 
 
