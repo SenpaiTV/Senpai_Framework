@@ -18,7 +18,7 @@
          * The SRC file for the image.
          * @type {string}
          */
-        var imageSrc = "images/sakurai.jpg";
+        var imageSrc = "images/gaben.jpg";
 
 
 
@@ -68,6 +68,74 @@
 
 
 
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script>
+
+        function connect(){
+
+
+            var socket = io("http://mc.marcsollie.nl:25010");
+            socket.on('gaben', function(msg){
+
+                console.log(msg);
+                spreek(msg)
+
+
+            });
+
+        }
+    </script>
+    <script>
+        var strings = Array("Why don't you buy some more steam games?",
+                "Hail GabeN",
+                /*"Heil GabeN",*/
+                "Why don't you give my... Wallet... Some dollars?",
+                "Insert lenny face.",
+                "Is it me or is it getting hot in here? Oh wait, that's your money in my fireplace.",
+                "Why didn't you buy more games in the last sale?",
+                "You should buy more games. It's easy!",
+                "PC's are better than consoles will ever be.",
+                "I have a whole discord server for me and me only.",
+                "I can be reached at Gabe N at valve software dot com",
+                "You can't resist the charm of my sales.",
+                "Paid mods? I think you mean an fired employee.",
+                "Steam!!!",
+                "I like this number.");
+
+
+
+
+        var string;
+        var tts;
+
+        var voices;
+        function spreek(bericht){
+
+
+
+
+            ;
+            tts = new SpeechSynthesisUtterance(bericht);
+            tts.default = false;
+
+            voices = window.speechSynthesis.getVoices();
+
+            voices;
+            tts.voice = voices[3]; // Note: some voices don't support altering params
+
+            tts.lang = "en-US";
+            window.speechSynthesis.speak(tts);
+        }
+        function praat(){
+            window.setTimeout(connect, 30000);
+
+            string = strings[Math.floor(Math.random()*strings.length)]
+            spreek(string);
+
+        }
+        spreek("Welcome to our most glorious bot, Gabe Bot Mark Two!");
+        window.setTimeout(connect, 10000);
+    </script>
 
 
     <!-- End Marc -->
